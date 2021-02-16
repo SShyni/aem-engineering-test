@@ -9,7 +9,6 @@ This project is implemented using AEM archetype and Docker
 
 *AEM license*
 
-
 ###This project is layered out using 2 Docker containers
 
 Code Container `aa-core`:
@@ -54,6 +53,23 @@ Check the health check next to the container status above.
 
 Log into the docker container using the above command to check the logs under path-
 `/opt/aem/crx-quickstart/logs`
+
+
+###Files modified-
+``` adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/impl/NumberException.java
+adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/servlet/RomanNumeralServlet.java
+adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/util/NumberConversion.java
+adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/Constants.java
+
+Test
+adobe-assignment/core/src/test/java/com/adobe/assignment/aem/core/number/util/NumberConversionTest.java
+
+Docker-
+base-aem-image/Dockerfile
+base-aem-image/publisher/Dockerfile
+docker-compose.yml
+start.sh ```
+
 
 
 

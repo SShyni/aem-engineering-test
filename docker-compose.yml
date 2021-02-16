@@ -30,7 +30,7 @@ services:
       - aem-network1
     volumes:
       - ../aem-engineering-test/adobe-assignment:/usr/local/app/adobe-assignment
-    command: bash -c "
+    command: bash -c "sleep 120;
             cd /usr/local/app/adobe-assignment; mvn clean install -PautoInstallPackage -Daem.port=8080  -Daem.host=publisher -Padobe-public;
             tail -f /dev/null"
     healthcheck:
