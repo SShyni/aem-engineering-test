@@ -32,6 +32,7 @@ AEM Container `publisher`:
 NOTE- As part of this project the AEM baseline image is not hosted GitHub or Docker Hub for security reason but is created from the AEM binaries using Dockerfile.
 Please add AEM6.5 binary JAR(name `aem-author-4502.jar`) and license file (named `license.properties`) file in `base-aem-image` directory
 
+## End point URL - http://localhost:8080/romannumeral?query=10
 
 ### Debugging
 Command to login to the docker after starting the containers
@@ -71,5 +72,5 @@ docker-compose.yml
 start.sh 
 
 
-## End point URL - http://localhost:8080/romannumeral?query=10
+
 
