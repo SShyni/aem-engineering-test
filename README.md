@@ -19,6 +19,7 @@ AEM Container `publisher`:
 
     The Roman Numeral web service is hosted on this AEM docker container.
 
+Used cAdvisor for basic monitoring
 
 ## How to build this repo
 - Start the container stack -> `./start.sh`
@@ -30,7 +31,7 @@ AEM Container `publisher`:
 
 ###`base-aem-image:` AEM docker baseline image project
 
-NOTE- As part of this project the AEM baseline image is not hosted GitHub or Docker Hub for security reason but is created from the AEM binaries using Dockerfile.
+NOTE- As part of this project the AEM baseline image is not hosted on GitHub or Docker Hub for security reason but is created from the AEM binaries using Dockerfile.
 
 **Please place AEM6.5 binary JAR(name it `aem-author-4502.jar`) and license file (name it `license.properties`) under `base-aem-image` directory
 
@@ -52,7 +53,7 @@ f53420c6dd16        publisher           "java -jar cq-quicks…"   31 minutes ag
 ```
 
 `aa-core` container constantly runs health check and check if the AEM service is up and running
-Check the health check next to the container status above.
+You can also check the health check next to the container status above.
 
 Log into the docker container using the above command to check the logs under path-
 `/opt/aem/crx-quickstart/logs`
@@ -76,6 +77,8 @@ base-aem-image/publisher/Dockerfile
 docker-compose.yml
 start.sh 
 
+```
+You can check your containers health and basic monitoring using cAdvisor
 
-
+##http://localhost:8081/docker/
 
