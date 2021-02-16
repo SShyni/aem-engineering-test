@@ -1,0 +1,45 @@
+version: '3.5'
+networks:
+  aem-network1:
+    driver: bridge
+    name: aem-network1
+services:
+  base-aem-image:
+    image:
+      base-aem-image
+    container_name: base-aem-image
+    networks:
+      - aem-network1
+    build: ./base-aem-image
+  publisher:
+    image:
+      publisher
+    container_name: publisher
+    networks:
+      - aem-network1
+    build: ./base-aem-image/publisher
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "base-aem-image"
+  adobe-assginment:
+    image:
+      maven:3.6.1-jdk-8
+    container_name: aa-core
+    networks:
+      - aem-network1
+    volumes:
+      - ../aem-engineering-test/adobe-assignment:/usr/local/app/adobe-assignment
+    command: bash -c "
+            cd /usr/local/app/adobe-assignment; mvn clean install -PautoInstallPackage -Daem.port=8080  -Daem.host=publisher -Padobe-public;
+            tail -f /dev/null"
+    healthcheck:
+      test:
+        curl -sS http://publisher:8080/romannumeral?query=4 || exit 1
+      interval: 5s
+      timeout: 10s
+      retries: 3
+    depends_on:
+      - "publisher"
+
+
