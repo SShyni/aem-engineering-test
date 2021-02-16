@@ -9,7 +9,7 @@ This project is implemented using AEM archetype and Docker
 
 *AEM license*
 
-###This project is layered out using 2 Docker containers
+##This project is layered out using 2 Docker containers
 
 Code Container `aa-core`:
 
