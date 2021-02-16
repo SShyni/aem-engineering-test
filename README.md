@@ -20,17 +20,19 @@ AEM Container `publisher`:
     The Roman Numeral web service is hosted on this AEM docker container.
 
 
-## How to build
+## How to build this repo
 - Start the container stack -> `./start.sh`
 - Stop the container stack -> `ctrl-c`
 
 ## Modules
 
 ###`adobe-assignment:` AEM multi module maven project
+
 ###`base-aem-image:` AEM docker baseline image project
 
 NOTE- As part of this project the AEM baseline image is not hosted GitHub or Docker Hub for security reason but is created from the AEM binaries using Dockerfile.
-Please add AEM6.5 binary JAR(name `aem-author-4502.jar`) and license file (named `license.properties`) file in `base-aem-image` directory
+
+**Please place AEM6.5 binary JAR(name it `aem-author-4502.jar`) and license file (name it `license.properties`) under `base-aem-image` directory
 
 ## End point URL - http://localhost:8080/romannumeral?query=10
 
