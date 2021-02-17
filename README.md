@@ -67,6 +67,7 @@ adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/impl/Nu
 adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/servlet/RomanNumeralServlet.java
 adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/number/util/NumberConversion.java
 adobe-assignment/core/src/main/java/com/adobe/assignment/aem/core/Constants.java
+adobe-assignment/ui.content/src/main/content/jcr_root/etc/map/http/localhost_any/.content.xml
 
 Test -
 adobe-assignment/core/src/test/java/com/adobe/assignment/aem/core/number/util/NumberConversionTest.java
